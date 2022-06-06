@@ -5,7 +5,7 @@
 
 2. 選擇性結構 (selection structure) : if-else、switch
 
-3. 重複性結構 (iteration structure) : for、whule、do-while
+3. 重複性結構 (iteration structure) : for、while、do-while
 
 
 ## 循序性結構 (sequence structure)
@@ -96,4 +96,82 @@ do
         迴圈主體;
         設定增減量;
     } while (判斷條件);
+```
+
+## 巢狀迴圈：迴圈敘述中又有其他迴圈敘述時
+
+當迴圈敘述中又有其它迴圈叙述時,就稱為巢狀迴圈(nested loops)，
+如巢狀 for迴圈、 巢狀 while 迴圈等。  
+當然您也可以使用混合巢狀迴圈,也就是迴圈中又有其它不同的迴圈。
+
+# 迴圈的跳離
+
+## break：讓程式強制跳離迴圈
+
+以下圖的for迴圈為例,在迴圈主體中有 break 敘述時,當程式執行到 break,即會離開 適圈主體,到迴圈外層的敘述繼續執行:
+
+```java
+for(初值設定; 判斷條件; 設增減量0)
+{
+    敘述1;
+    敘述2;
+    ...
+    break;
+    ...   // break 敘述以下的部分不會被執行
+    敘述n;
+}
+...
+```
+
+## continue：讓程式強制回到迴圈的起頭
+
+以下圖的for迴圈為例,在迴圈 主體中有 continue 敘述時,當程式執行到 continue,即會回到迴圈的起點,繼續執行迴圈主體的部分叙述:
+
+```java
+for(初值設定; 判斷條件; 設定增減量)
+{
+    敘述1;
+    敘述2;
+    ...
+    continue;
+    ...   // continue 敘述以下的部分不會被執行
+    敘述n;
+}
+...
+```
+# switch 敘述：將多對一的情況簡化，使程式簡潔易讀
+
+1. switch 敘述先計算括號中運算式的運算結果
+
+2. 根據運算式的值,檢查是否符合執行 case 後面的選擇值。如果某個case 的選擇值 符合運算式的結果,就會執行該case所包含的敘述,直到執行至 break 敘述後才跳離整個 switch 敘述
+
+3. 若是所有case 的選擇值皆不適合,則執行 default 後面所包含的敘述,執行完畢即 離開 switch 敘述。如果沒有定義 default 的敘述,則直接跳離switch敘述。
+```java
+switch (運算式)
+{
+    case 選擇值1:
+        敘述主體1;
+        break;
+    case 選擇值2:
+        敘述主體2;
+        break;
+        ...
+    case 選擇值n:
+        敘述主體n;
+        break;
+    default:
+        敘述主體;
+}       
+...
+```
+
+# 空迴圈：用來延遲程式的執行
+
+```java
+for(初值設定; 判斷條件; 設定增減量)
+{}
+```
+
+```java
+for(初值設定; 判斷條件; 設定增減量);
 ```
