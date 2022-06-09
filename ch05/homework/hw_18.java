@@ -4,8 +4,6 @@
 public class hw_18 {
 
     public static void main(String[] args) {
-       
-        Boolean status = false;
 
         for(int i = 45; i>=2;i--)
         {
