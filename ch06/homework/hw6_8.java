@@ -2,37 +2,35 @@
 public class hw6_8 {
     public static void main(String[] args) {
         
-        double temp[][] = {{18.2,23.8,20.6},
-                           {17.3,25.1,21.5},
-                           {15.0,20.6,18.4},
-                           {13.4,17.8,15.7}};
+        double temp[][] = {{18.2,17.3,15.0,13.4},
+                           {23.8,25.1,20.6,17.8},
+                           {20.6,21.5,18.4,15.7}};
 
         String day[] ={"星期一","星期二","星期三","星期四"};
         String section[] ={"時段一","時段二","時段三"};
         
-        int section1=0,section2=0,section3=0;
+        double day_total[] = new double[4];
         
         double max = temp[0][0],min = temp[0][0];
         int max_i=0,max_j=0;
         int min_i=0,min_j=0;
 
+        System.out.print("　　　\t ");
+        
+        for (int i=0;i<day.length;i++)
+        {
+            System.out.print(day[i]+"\t ");
+        }
+        System.out.println();
+
         for (int i = 0; i<temp.length;i++)
         {   
-            int total = 0;
-            System.out.print(day[i]+"\t ");
+            System.out.print(section[i]+"\t ");
             for (int j = 0; j<temp[i].length;j++)
             {
-                total+=temp[i][j];
-                System.out.print(temp[i][j]+" ");
+                System.out.print(""+temp[i][j]+"　 ");
 
-                switch(j){
-                    case 0:
-                        section1+=temp[i][j];
-                    case 1:
-                        section2+=temp[i][j];
-                    case 2:
-                        section3+=temp[i][j];
-                }
+                day_total[j] += temp[i][j];
 
                 if (temp[i][j]>max){
                     max = temp[i][j];
@@ -47,13 +45,18 @@ public class hw6_8 {
                 }
 
             }
-            System.out.print("平均氣溫 = "+(double) total/3+"\n");
+            System.out.println();            
         }
-        System.out.println("時段一的平均氣溫= " +  (double) section1/3);
-        System.out.println("時段二的平均氣溫 = " + (double) section2/3);
-        System.out.println("時段三的平均氣溫 = " + (double) section3/3);
+
+        System.out.print("平均氣溫 ");
+
+        for (int i=0;i<day_total.length;i++)
+        {   
+            System.out.print(String.format("%.1f　 ",day_total[i]/3));
+        }
+        
         System.out.println();
-        System.out.println("溫度最高的日子發生在"+day[max_i]+" "+section[max_j]);
-        System.out.println("溫度最低的日子發生在"+day[min_i]+" "+section[min_j]);
+        System.out.println("溫度最高的日子發生在"+day[max_j]+" "+section[max_i]);
+        System.out.println("溫度最低的日子發生在"+day[min_j]+" "+section[min_i]);
     }
 }
