@@ -27,7 +27,7 @@ public static 傳回值 函數名稱 (型態 引數1, 型態 引數2)
 ```java
 public static void main(String args[])
     {
-     public static void add10(int value)
+     public static void input_value(int value) //傳入變數
         {
 
         }
@@ -36,8 +36,17 @@ public static void main(String args[])
 
 ## 陣列的傳遞機制
 
-稍早我們曾提及,在傳遞基本資料型態的變數到函數時,Java 會把該變數拷貝一份, 再傳遞這份拷貝的變數,這個做法也就是「傳值」的機制。然而,如果是傳遞陣列, 或者是傳遞由類別所建立的物件時,則以「傳參照」(pass by reference)的方式進行。
+在傳遞基本資料型態的變數到函數時,Java 會把該變數拷貝一份, 再傳遞這份拷貝的變數,這個做法也就是「傳值」的機制。然而,如果是傳遞陣列, 或者是傳遞由類別所建立的物件時,則以「傳參照」(pass by reference)的方式進行。
 
+```java
+public static void main(String args[])
+    {
+     public static void input_array(int arr[]) //傳入陣列
+        {
+
+        }
+    }
+```
 
 # 遞迴 (recursive)
 > 所謂的遞迴就是函數本身呼叫自已。
