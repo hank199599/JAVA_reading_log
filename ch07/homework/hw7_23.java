@@ -14,7 +14,7 @@ public class hw7_23
         for( int i=2;i<=n;i++)
             {
                 res += i*(i-1);
-                System.out.println(i+" :"+i*(i-1));
+                // System.out.println(i+" :"+i*(i-1));
             }
         return res;
     }
