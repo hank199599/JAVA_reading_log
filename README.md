@@ -26,3 +26,20 @@
 13. 例外處理
 14. 檔案管理
 15. 多執行緒
+
+
+## 如何執行?
+
+1. 安裝JDK
+2. 編譯.java檔為機器瑪
+    ```cmd
+    javac example.java
+    ```
+    若遇到中文字編譯問題，則用下方的指令碼
+    ```cmd
+    javac -encoding utf-8 example.java
+    ```
+3. 執行編譯完成的執行檔
+    ```cmd
+    java example
+    ```
