@@ -9,15 +9,22 @@ class CCircle    // 定義 CRectangle 類別
     {
         System.out.println("area="+pi*radius*radius);
     }
+
+    void show_all()
+    {
+        System.out.println("radius="+radius);
+        show_area();
+    }
+
 }
 
-public class app8_4
+public class app8_6
 {
     public static void main(String args[])
     {
         CCircle cir1 = new CCircle(); // 建立rect1物件
 
-        cir1.radius = 2.0;             // 設定 radius 的值
-        cir1.show_area();              // 呼叫 show_area()函數
+        cir1.radius = 2.0;  // 設定 radous的值
+        cir1.show_all();                 
     }// 
 }

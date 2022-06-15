@@ -11,13 +11,13 @@ class CCircle    // 定義 CRectangle 類別
     }
 }
 
-public class app8_4
+public class app8_12
 {
     public static void main(String args[])
     {
         CCircle cir1 = new CCircle(); // 建立rect1物件
 
-        cir1.radius = 2.0;             // 設定 radius 的值
+        cir1.radius = -2.0;            // 在CCircle類別外部可以設定 radius的值
         cir1.show_area();              // 呼叫 show_area()函數
     }// 
 }

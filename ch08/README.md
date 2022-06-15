@@ -103,7 +103,83 @@ public static void main(String args[])
     return 運算式;  // (body)
 }
 ```
-* 呼叫類別內的函數
-  ```java
+呼叫類別內的函數
+```java
     物件名稱.函數名稱(引數1, 引數2, ...)
+```
+
+### 資料成員的存取方式
+
+* 在main函數：需指定物件名稱
+    ```java
+        物件名稱.資料成員名稱
     ```
+    e.g.
+    ```java
+    class app
+    {
+        public static void main(String args[])
+        {
+            ....
+            cir1.radius = 2.0;
+            cir1.pi = 3.0;
+        }
+    }
+    ```
+* 在類別宣告的內部使用這些資料成員，可以直接存取而不需呼叫它的物件名稱
+    e.g.
+    ```java
+    class Ccircle
+    {   
+        double pi = 3.14;
+        double radius;
+
+        void show_area()
+        {
+            System.out.println("area="+pi*radius*radius);
+        }
+       
+    }
+    ```
+* 「this」關鍵字：用以強調**物件本身的field**
+
+### 引數的傳遞與回傳值
+* 若函數本身沒有回傳值，則必須在前面加上 "void"
+```java
+void show_area()
+{
+    System.out.println("area="+pi*radius*radius);
+}
+```
+* 若函數本身有回傳值，則必須在前面加上對應的資料型態
+```java
+    double getRadius()   // getRadius()函數：用來回傳物件的半徑
+    {
+        return radius; // 資料型態為double
+    }
+
+```
+
+### 函數成員的多載
+
+> 我們不能設計出引數個數和型態完全相同，而只有傳回值型態不同的多載  
+> 城市會無法判斷是哪一個函數被呼叫
+
+## 公有成員與私有成員
+
+> 在類別外部存取資料成員時，如果沒有一個機制來限定存取的方式，很可能導致安全上的漏洞。  
+> 進而發生錯誤
+
+### 建立公有成員(public menber)
+```java
+public
+```
+* 沒有寫上"public"：該成員只能在同一個類別庫裡被存取
+* 有寫上"public"：成員可以被其他類別庫的物件所存取
+### 建立私有成員(private menber)
+```java
+private
+```
+
+## 封裝 (encapsulation)
+把field和函數包裝在一個類別裡，用來限制成員的存取，以達到保護資料的一種技術。
