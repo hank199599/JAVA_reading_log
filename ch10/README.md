@@ -51,6 +51,7 @@ class 子類別名稱 extends 父類別名稱
 
 ### 建構元的呼叫
 > 在子類別的建構元中，透過該關鍵字呼叫父類別的建構元
+> 必須要在有繼承關係的狀況下方可使用
 ```java
 super()
 ```
@@ -114,4 +115,51 @@ protected
 2. 透過父類別的變數存取子類別物件的成員，僅限於「**改寫**」的情況發生時。  
    (父類別與子類別的函數名稱、引數個數與型態必須完全相同)
 
-   
+
+# 物件導向名詞解釋
+
+```java
+class CCircle // 父類別
+{
+  String name;
+}
+
+class CCoin extends CCircle // 子類別
+{
+
+}
+```
+
+* "has-a" : 類別與內部成員的關係
+* "is-a" : 有繼承關係的類別
+
+# 設定終止繼承
+```java
+final
+```
+1. 加在資料成員前面，使該成員成為一個**常數(constant)**
+    ```java
+      protected static final double PI = 3.14;
+    ```
+2. 使某類別無法被其他類別繼承，於宣告時加入
+   * 變數或是類別裡的資料成員經過 final 宣告之後,就像常數般無法再被更改其值,  
+      它的值只能在 final 宣告時設定一次。
+
+   * 函數經過 final 宣告之後,不能被改寫。
+
+   * 類別經過 final 宣告後,不能被繼承。
+
+    ```
+    app10_10.java:11: error: show() in Cbbb cannot override show() in Caaa
+    public void show()
+                ^
+      overridden method is final
+    1 error
+    ```
+
+# Object 類別：所有類別之父類別
+> 事實上於Java裡,如果某一類別沒有指定其父類別的話,  
+> 則Java會自動設定該類別繼承自 Object 這個類別,  
+> 而成為它的子類別 (Object是置於java.lang 類別庫裡的一個類別)
+
+
