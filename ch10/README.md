@@ -69,10 +69,33 @@ Java 在執行子類別的建構元之前,如果沒有用 super()來呼叫特定
 
 # 保護成員 (protected members)
 
-若子類別欲存取位於父類別
+若子類別欲存取位於父類別，會出現無法存取之錯誤訊息。  
+因為原先的資料成員被宣告為```private```  
+e.g. app10_2_1.java
 ```
 app10_2_1.java:34: error: radius has private access in CCircle
         radius = r;
         ^
 1 error
 ```
+## 使子類別能存取被保護的資料成員
+```java
+protected
+```
+把成員宣告成 protected 最大的好處是可同時兼顧到成員的安全性與便利性,  
+因為它只能供父類別與子類別的內部來存取,外界無法更改或讀取。  
+附帶一提,父類別裡的 protected 成員,繼承到子類別之後,其存取的屬性還是 protected。
+
+# 改寫 (overriding)
+> 與「多載」相似，均是JAVA「多型(polymorphism)」的技術之一
+
+利用「改寫」的技術,於子類別中可定義和父類別裡之名稱、引數個數與資料型態均完全相同的函數,  
+用以取代父類別 中原有的函數。
+
+## 多載 v.s. 改寫
+
+||多載|改寫|
+|-|---------|-----------|
+|英文名|overloading|overriding|
+|關係|相同類別內|子類別中|
+||||
