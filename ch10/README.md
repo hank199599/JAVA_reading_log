@@ -159,7 +159,32 @@ final
 
 # Object 類別：所有類別之父類別
 > 事實上於Java裡,如果某一類別沒有指定其父類別的話,  
-> 則Java會自動設定該類別繼承自 Object 這個類別,  
+> 則Java會**自動設定該類別繼承自 Object 這個類別**,  
 > 而成為它的子類別 (Object是置於java.lang 類別庫裡的一個類別)
 
+```java
+// 未指定父類別時，會以java.lang.Object類別作為他的父類別，而自身成為它的子類別
+class CCircle 
+{
+  ... 
+}
+```
 
+* Object類別是類別之源，所有類別都直接或間接繼承它。
+
+## Object類別裡常用的函數
+
+|函數名稱|功能說明|
+|---------|-----------|
+|```Class getClass()```|取得呼叫 getClass() 的物件所屬的類別|
+|```Boolean equals(Object obj)```|兩個類別變數所指向是否為同一個變數|
+|```String toString()```|將呼叫toString()的物件轉成字串|
+
+###  getClass()
+```java
+obj.getClass() // 取得變數obj所指向之物件所屬的類別
+```
+> getClass()函數的回傳值是Class型態，必須先宣告一個Class變數來接收它。
+
+### equals()
+> 用來比較兩個類別函數是否指向同一個物件
