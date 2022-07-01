@@ -42,3 +42,44 @@ interface 介面名稱     // 定義抽象類別
 }
 ``` 
 
+* 資料成員必須要設定初值
+* 函數必須是「抽象函數」，只需定義名稱而不需定義處理方式
+* 允許一般函數與抽象函數並存
+* JAVA允許省略```final```與```abstract```關鍵字
+
+## 介面的實作(implementation)
+> 利用介面A打造類別B的過程，稱之為**以「類別B」實作「介面A」**
+```java
+class 類別名稱 implements 介面名稱     // 定義抽象類別
+{
+    ... ...
+}
+``` 
+
+## 多重繼承：用類別來實作多個以上的介面
+```java
+class 類別名稱 implements 介面1,介面2...     // 定義抽象類別
+{
+    ... ...
+}
+``` 
+
+## 介面的延伸
+
+```java
+interface 子介面名稱 extends 父介面名稱1,父介面名稱2...  
+{
+    ... ...
+}
+``` 
+
+|既有的介面|衍伸出的介面|
+|---------|-----------|
+|父介面(super interface)|子介面(sub interface)|
+|基底介面(basis interface)|衍生介面(derived interface)|
+
+
+# 類別關係的判斷 : instanceof
+```java
+    object instanceof ClassName
+```
