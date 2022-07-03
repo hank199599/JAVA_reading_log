@@ -1,7 +1,7 @@
 abstract class Math
 {
     protected int ans;
-    public void show()
+    public static void show()
     {
         System.out.println("ans="+ans);
     }
@@ -35,10 +35,14 @@ class Compute extends Math
 
 }
 
-public class hw11_2 {
+public class hw11_4 {
     public static void main(String args[])
-    {
-        Compute cmp = new Compute();
+    {   
+        Math mth = new Math(); 
+        /*
+         * 抽象類別不能被直接呼叫使用
+         */
+        // Compute cmp = new Compute();
         cmp.mul(3,5);
         cmp.show();
     }

@@ -82,4 +82,5 @@ interface 子介面名稱 extends 父介面名稱1,父介面名稱2...
 # 類別關係的判斷 : instanceof
 ```java
     object instanceof ClassName
+   '子類別'            '父類別'
 ```

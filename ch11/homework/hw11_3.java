@@ -37,8 +37,12 @@ class Compute extends Math
 
 public class hw11_2 {
     public static void main(String args[])
-    {
-        Compute cmp = new Compute();
+    {   
+        Math mth = new Math(); 
+        /*
+         * 抽象類別不能被直接呼叫使用
+         */
+        // Compute cmp = new Compute();
         cmp.mul(3,5);
         cmp.show();
     }

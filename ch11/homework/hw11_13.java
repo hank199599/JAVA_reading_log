@@ -1,18 +1,25 @@
-abstract class Math
+interface Show_ans
 {
-    protected int ans;
-    public void show()
-    {
-        System.out.println("ans="+ans);
-    }
+    public void show();
+}
+
+interface Math extends Show_ans
+{
     public abstract void add(int a, int b);
     public abstract void sub(int a, int b);
     public abstract void mul(int a, int b);
     public abstract void div(int a, int b);
 }
 
-class Compute extends Math
-{
+class Compute implements Math
+{       
+    public int ans;
+
+    public void show()
+    {
+        System.out.println("ans="+ans);
+    }
+
     public void add(int a, int b)
     {
         ans = a+b;
@@ -35,7 +42,7 @@ class Compute extends Math
 
 }
 
-public class hw11_2 {
+public class hw11_13 {
     public static void main(String args[])
     {
         Compute cmp = new Compute();
