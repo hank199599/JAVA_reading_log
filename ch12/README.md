@@ -46,3 +46,10 @@
 ```java
 import package名稱.類別名稱;
 ```
+
+## 建構package的階層關係
+```java
+    package package名稱.sub-package名稱;
+```
+
+# JAVA 常用的類別庫
