@@ -53,3 +53,12 @@ import package名稱.類別名稱;
 ```
 
 # JAVA 常用的類別庫
+
+* java.applet：applet相關功能
+* java.awt：早期使用的GUI元件
+* java.awt.event：event driven相關元件
+* java.swing：目前使用的GUI元件
+* java.lang：基本類別，會自動載入
+* java.io：與輸出/輸入相關的類別
+* java.net：與網路相關的類別
+* java.util：一些常用的工具類別
